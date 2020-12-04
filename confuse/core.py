@@ -552,7 +552,7 @@ class Configuration(RootView):
         else:
             self._package_path = None
 
-        self._env_var = '{0}DIR'.format(self.appname.upper())
+        self._env_var = '{0}DIR'.format(self.appname.upper().replace('-', '_'))
 
         if read:
             self.read()
